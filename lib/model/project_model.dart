@@ -13,8 +13,6 @@ class ProjectModel extends ConceptModel {
   Projects get projects => getEntry(project);
 
   init() {
-    var projects = projects;
-
     var design = new Project();
     design.name = 'Dartling Design';
     design.description =

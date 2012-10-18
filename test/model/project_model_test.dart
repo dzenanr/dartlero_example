@@ -32,7 +32,7 @@ testProjects(Projects projects) {
           'Programming Dartling.';
       projects.add(production);
       expect(projects.count, equals(++projectCount));
-      
+
       projects.display('Projects');
     });
     tearDown(() {
@@ -46,14 +46,14 @@ testProjects(Projects projects) {
       project.name = 'modelibra';
       project.description = 'domain model framework for educational purposes';
       projects.add(project);
-      projects.display('Add Project');   
+      projects.display('Add Project');
     });
     test('Add Project Without Data', () {
       var projectCount = projects.count;
       var project = new Project();
       expect(project, isNotNull);
       var added = projects.add(project);
-      projects.display('Add Project Without Data');   
+      projects.display('Add Project Without Data');
     });
     test('Add Project Not Unique', () {
       var projectCount = projects.count;
@@ -61,7 +61,7 @@ testProjects(Projects projects) {
       expect(project, isNotNull);
       project.name = 'Dartling';
       var added = projects.add(project);
-      projects.display('Add Project Not Unique');   
+      projects.display('Add Project Not Unique');
     });
     test('Find Project by Name', () {
       var searchName = 'Dartling';
@@ -129,7 +129,7 @@ testProjects(Projects projects) {
       expect(copiedProjects.count, equals(projects.count));
       expect(copiedProjects, isNot(same(projects)));
       expect(copiedProjects != projects);
-      expect(copiedProjects, isNot(equals(projects))); 
+      expect(copiedProjects, isNot(equals(projects)));
       copiedProjects.forEach((cp) =>
           expect(cp, isNot(same(projects.find(cp.name)))));
       copiedProjects.display('Copied Projects');
@@ -155,5 +155,5 @@ testModel() {
 
 main() {
   initDisplayModel();
-  //testModel();
+  testModel();
 }
