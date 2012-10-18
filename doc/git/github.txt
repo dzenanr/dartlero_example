@@ -31,7 +31,8 @@ Create a New Repo at GitHub
 (without README, since cloning will not be used).
 Repository Name: dartlero_example
 Description: 
-  Model framework for educational purposes.
+  An example how to use Dartlero, a model framework for educational purposes.
+  Concepts: Project.
       
 Next steps:
   cd git/dart/educ/dartlero_example
