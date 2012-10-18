@@ -40,8 +40,6 @@ testProjects(Projects projects) {
       expect(projects.empty, isTrue);
     });
     test('Add Project', () {
-      var projectModel = new ProjectModel();
-      var projects = projectModel.projects;
       var project = new Project();
       project.name = 'modelibra';
       project.description = 'domain model framework for educational purposes';
