@@ -4,7 +4,6 @@ homepage: http://ondart.me/
 version: 0.0.1
 description:
   An example how to use Dartlero, a model framework for educational purposes.
-  Concepts: Project.
 dependencies:
   dartlero:
     git: git://github.com/dzenanr/dartlero.git
