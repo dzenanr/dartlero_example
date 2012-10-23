@@ -1,7 +1,7 @@
 
-#import('package:unittest/unittest.dart');
-#import('package:dartlero/dartlero.dart');
-#import('package:dartlero_example/dartlero_example.dart');
+import 'package:unittest/unittest.dart';
+import 'package:dartlero/dartlero.dart';
+import 'package:dartlero_example/dartlero_example.dart';
 
 testProjects(Projects projects) {
   group("Testing Projects", () {
