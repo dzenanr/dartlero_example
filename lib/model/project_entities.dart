@@ -4,7 +4,7 @@ class Project extends ConceptEntity<Project> {
 
   String _name;
   String description;
-  
+
   String get name => _name;
   set name(String name) {
     _name = name;
@@ -27,10 +27,10 @@ class Project extends ConceptEntity<Project> {
            '    description: ${description}\n'
            '  }';
   }
-  
+
   bool get onProgramming =>
       description.contains('Programming') ? true : false;
-  
+
   int nameCompareTo(Project other) {
     return name.compareTo(other.name);
   }
