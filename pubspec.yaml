@@ -1,9 +1,8 @@
 name: dartlero_example
+version: 0.0.5
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
+description: An example how to use Dartlero, a model framework for educational purposes.
 homepage: http://ondart.me/
-version: 0.0.3
-description:
-  An example how to use Dartlero, a model framework for educational purposes.
 dependencies:
   dartlero:
     git: git://github.com/dzenanr/dartlero.git
