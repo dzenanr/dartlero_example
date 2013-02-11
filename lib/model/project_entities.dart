@@ -8,13 +8,15 @@ class Project extends ConceptEntity<Project> {
   String get name => _name;
   set name(String name) {
     _name = name;
-    code = name;
+    if (code == null) {
+      code = name;
+    }
   }
 
   Project newEntity() => new Project();
 
   Project copy() {
-    var project = new Project();
+    var project = super.copy();
     project.name = name;
     project.description = description;
     return project;
@@ -26,6 +28,19 @@ class Project extends ConceptEntity<Project> {
            '    name: ${name}, \n '
            '    description: ${description}\n'
            '  }';
+  }
+
+  Map<String, Object> toJson() {
+    Map<String, Object> entityMap = super.toJson();
+    entityMap['name'] = name;
+    entityMap['description'] = description;
+    return entityMap;
+  }
+
+  fromJson(Map<String, Object> entityMap) {
+    super.fromJson(entityMap);
+    name = entityMap['name'];
+    description = entityMap['description'];
   }
 
   bool get onProgramming =>
@@ -40,5 +55,6 @@ class Project extends ConceptEntity<Project> {
 class Projects extends ConceptEntities<Project> {
 
   Projects newEntities() => new Projects();
+  Project newEntity() => new Project();
 
 }
