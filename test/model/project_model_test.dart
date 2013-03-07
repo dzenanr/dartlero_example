@@ -130,7 +130,7 @@ testProjects(Projects projects) {
       copiedProjects.forEach((cp) =>
           expect(cp, isNot(same(projects.find(cp.name)))));
       copiedProjects.display('Copied Projects');
-      projects.display('Projects');
+      //projects.display('Projects');
     });
     test('True for Every Project', () {
       expect(projects.every((p) => p.code != null), isTrue);
@@ -165,6 +165,6 @@ testModel() {
 }
 
 main() {
-  initDisplayModel();
+  //initDisplayModel();
   testModel();
 }
